@@ -6,8 +6,8 @@ Use case should be used in 3 places:
 - on api endpoint using http request - available for actual signed in user
 
 Additional requirements:
-- notify about change external stats system
-- notify about change external marketing system
+- notify external stats system about user email change
+- notify external marketing system about user email change
 - change log
 - entire email changing process should be secure
 
