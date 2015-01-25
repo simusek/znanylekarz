@@ -9,5 +9,6 @@ Additional requirements:
 - notify external marketing system about user email change (service: marketing_system)
 - log this change
 
+
 - You can use existing existins User and UserRepository classes in AppBundle\Model namespace
 - For testing you can use built in php server
