@@ -1,7 +1,21 @@
 services:
     user_repository:
         class: AppBundle\Model\UserRepository
+        
+        
     stats_system:
         class: AppBundle\Service\StatsSystem
+        tags:
+            - { name:kernel.event_listener,event:user_changed,method:postRequest}
+        
     marketing_system:
         class: AppBundle\Service\MarketingSystem
+        tags:
+            - { name:kernel.event_listener,event:user_changed,method:postRequest}            
+   
+    logger_system:       
+         class: AppBundle\Service\LoggerSystem
+         arguments: ["@logger"]
+         tags:
+            - {name: kernel.event_listener,event:user_changed,method:onUserChange}
+           
