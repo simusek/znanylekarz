@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Radek
@@ -7,12 +8,13 @@
  */
 
 namespace AppBundle\Service;
+use AppBundle\Events\UserEvent;
 
+class StatsSystem {
 
-class StatsSystem
-{
-	public function postRequest($data)
-	{
-		return true;
-	}
+       public function postRequest(UserEvent $event) {
+        echo "\nConnect to external Stats System e.g. by CURL\n";
+        return true;
+    }
+
 }

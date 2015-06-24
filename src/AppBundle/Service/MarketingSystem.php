@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Radek
@@ -7,12 +8,17 @@
  */
 
 namespace AppBundle\Service;
+use AppBundle\Events\UserEvent;
 
+class MarketingSystem {
 
-class MarketingSystem
-{
-	public function postRequest($data)
-	{
-		return true;
-	}
+    public function postRequest(UserEvent $event) {
+        
+        $user = $event->getUser();
+        
+        echo "\nConnect to external Marketing System e.g. by CURL\n";
+
+        return true;
+    }
+
 }
